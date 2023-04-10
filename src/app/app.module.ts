@@ -16,6 +16,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { ForgotPasswpordComponent } from './forgot-passwpord/forgot-passwpord.component';
+import { AddProductComponent } from './catalog/add-product/add-product.component';
+import { AddCategoryComponent } from './catalog/add-category/add-category.component';
+import { ProductListComponent } from './catalog/product-list/product-list.component';
+import { CategoryListComponent } from './catalog/category-list/category-list.component';
+import { BrandListComponent } from './catalog/brand-list/brand-list.component';
+import { AddBrandComponent } from './catalog/add-brand/add-brand.component';
+import { OrdersComponent } from './catalog/orders/orders.component';
+import { CustomerDetailsComponent } from './customer/customer-details/customer-details.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +33,15 @@ import { ForgotPasswpordComponent } from './forgot-passwpord/forgot-passwpord.co
     LoginComponent,
     DashboardComponent,
     SidebarComponent,
-    ForgotPasswpordComponent
+    ForgotPasswpordComponent,
+    AddProductComponent,
+    AddCategoryComponent,
+    ProductListComponent,
+    CategoryListComponent,
+    BrandListComponent,
+    AddBrandComponent,
+    OrdersComponent,
+    CustomerDetailsComponent
   ],
   imports: [
     BrowserModule,
