@@ -1,0 +1,16 @@
+.example-container {
+  width: 100vw;
+  height: 100vh;
+  /* margin: 10px; */
+  border: 1px solid #555;
+}
+
+
+/* .drawer {
+  width: 20vw;
+} */
+
+mat-drawer{
+  width: 15vw;
+ 
+}

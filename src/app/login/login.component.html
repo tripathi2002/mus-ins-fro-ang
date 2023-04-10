@@ -1,0 +1,35 @@
+<div id="floating-message" role="alert" *ngIf="message">
+    {{ message }}
+</div>
+
+
+<div class="container">
+    <div *ngIf="!authService.getUser()">
+
+        <form *ngIf="!authService.getUser()">
+            <h1>Login</h1>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" #email required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password" #password required>
+            </div>
+            <div class="forget">
+                <a  [routerLink]="['/forgot-password']">forget-password</a>
+            </div>
+            <div>
+                <a class="login-button" (click)="login(email.value, password.value)">Submit</a>
+            </div>
+        </form>
+    </div>
+
+    <div *ngIf="authService.getUser()">
+        <h2>
+            Logged in as <b> {{ authService.getUser() }}</b>
+        </h2>
+        <a class="logout-link" (click)="logout()">Log out</a>
+    </div>
+
+</div>
