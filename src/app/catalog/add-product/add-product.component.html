@@ -1,1 +1,43 @@
-<p>add-product works!</p>
+
+<form [formGroup]="product" (ngSubmit)="addProduct()">
+    <div class="form">
+            {{ title}}
+        <div>
+            <label for="title">Title</label>
+                <input type="text" name="title" formControlName="title" id="title">
+        </div>
+        
+        <div>
+            <label for="des">des</label>
+            <input type="text" name="descriptiion" formControlName="description" id="des">
+        </div>
+        
+        <div>
+            <label for="title">price</label>
+            <input type="text" formControlName="price" name="price" >
+        </div>
+        
+        <div>
+            <label for="title">category</label>
+            <input type="text" formControlName="category" name="category" >
+        </div>
+        
+        <div>
+            <label for="title">color</label>
+            <input type="text" formControlName="color" name="color">
+        </div>
+        
+        <div>
+            <label for="title">brand</label>
+            <input type="text" name="brand">
+        </div>
+        <div>
+            <label for="title">quantity</label>
+            <input type="text" formControlName="quantity" name="quantity">
+        </div>
+        <div>
+            <button type="submit">Add product</button>
+        </div>
+    </div>
+
+    </form>

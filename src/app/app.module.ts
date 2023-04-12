@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,8 @@ import { AUTH_PROVIDERS } from './services/auth.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatSidenavModule} from '@angular/material/sidenav';
+// import {MatFormFieldModule} from '@angular/material/form-field';
+// import {MatInputModule} from '@angular/material/input';
 import { ForgotPasswpordComponent } from './forgot-passwpord/forgot-passwpord.component';
 import { AddProductComponent } from './catalog/add-product/add-product.component';
 import { AddCategoryComponent } from './catalog/add-category/add-category.component';
@@ -23,7 +26,7 @@ import { CategoryListComponent } from './catalog/category-list/category-list.com
 import { BrandListComponent } from './catalog/brand-list/brand-list.component';
 import { AddBrandComponent } from './catalog/add-brand/add-brand.component';
 import { OrdersComponent } from './catalog/orders/orders.component';
-import { CustomerDetailsComponent } from './customer/customer-details/customer-details.component';
+import { CustommerListComponent } from './catalog/custommer-list/custommer-list.component';
 
 @NgModule({
   declarations: [
@@ -41,15 +44,18 @@ import { CustomerDetailsComponent } from './customer/customer-details/customer-d
     BrandListComponent,
     AddBrandComponent,
     OrdersComponent,
-    CustomerDetailsComponent
+    CustommerListComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule,
+    NgbModule,  // for bootstrap
     HttpClientModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     MatSidenavModule,
+    // MatFormFieldModule,
+    // MatInputModule,
   ],
   providers: [
     AUTH_PROVIDERS,

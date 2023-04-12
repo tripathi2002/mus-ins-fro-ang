@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs';
+import { AddProductService } from './add-product.service';
 
 let API_KEY = 'http://127.0.0.1:1000/api';
 
@@ -60,5 +61,6 @@ export class AuthService {
 
 export const AUTH_PROVIDERS: Array<any> = [
   { provide: AuthService, useClass: AuthService },
+  { provide: AddProductService, useClass: AddProductService },
   { provide: API_KEY, useValue: API_KEY },
 ];

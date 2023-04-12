@@ -103,10 +103,8 @@ button[type="submit"]:hover {
 
 #floating-message {
   /* style the floating message container */
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
   background-color: #007bff;
   color: white;
   padding: 10px;
