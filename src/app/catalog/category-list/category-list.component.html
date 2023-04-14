@@ -1,51 +1,24 @@
 <div class="recent-orders">
-    <h2>Recent Orders</h2>
+    <h2>{{title}}</h2>
     <table>
         <thead>
             <tr>
                 <th>S.No</th>
-                <th>Product Name</th>
-                <th>Product Number</th>
-                <th>Payment</th>
-                <th>Status</th>
+                <th>Title</th>
+                <th>createdAt</th>
+                <th>updatedAt</th>
                 <th></th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-            <td>Foldable Mini Dron</td>
-                <td>85631</td>
-                <td>Due</td>
-                <td class="warning">Pending</td>
-                <td class="primary">Details</td>
-            </tr>
-            <tr>
-                <td>1</td>
-            <td>Foldable Mini Dron</td>
-                <td>85631</td>
-                <td>Due</td>
-                <td class="warning">Pending</td>
-                <td class="primary">Details</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Foldable Mini Dron</td>
-                <td>85631</td>
-                <td>Due</td>
-                <td class="warning">Pending</td>
-                <td class="primary">Details</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Foldable Mini Dron</td>
-                <td>85631</td>
-                <td>Due</td>
-                <td class="warning">Pending</td>
-                <td class="primary">Details</td>
+            <tr *ngFor="let category of categories" >
+                <td>__</td>
+                <td>{{category.title}}</td>
+                <td>{{category.createdAt | date: 'shortDate'}}</td>
+                <td>{{category.updatedAt| date: 'shortDate'}}</td>
+                <td></td>
             </tr>
         </tbody>
     </table>
-    <a href="#">Show All</a>
+    <a >Show All</a>
 </div>
-    

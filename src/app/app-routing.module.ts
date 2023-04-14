@@ -12,7 +12,7 @@ import { CategoryListComponent } from './catalog/category-list/category-list.com
 import { BrandListComponent } from './catalog/brand-list/brand-list.component';
 import { AddBrandComponent } from './catalog/add-brand/add-brand.component';
 import { OrdersComponent } from './catalog/orders/orders.component';
-import { CustommerListComponent } from './catalog/custommer-list/custommer-list.component';
+import { CustomerListComponent } from './catalog/customer-list/customer-list.component';
 
 const routes: Routes = [
 
@@ -27,7 +27,7 @@ const routes: Routes = [
   { path: 'brand', component: AddBrandComponent },
   { path: 'brand-list', component: BrandListComponent },
   { path: 'orders', component: OrdersComponent },
-  { path: 'customer-list', component: CustommerListComponent },
+  { path: 'customer', component: CustomerListComponent },
   
   { 
     path: 'dashboard', 

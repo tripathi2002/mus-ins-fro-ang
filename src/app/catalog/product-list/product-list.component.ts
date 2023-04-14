@@ -1,16 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { AddProductService } from 'src/app/services/add-product.service';
+import { Product } from 'src/app/models/product';
 
-export interface Product {
-  _id: number;
-  title: string;
-  brand: string;
-  category: string;
-  color: string;
-  price: string;
-  createdAt?: Date;
-  updatedAt?: Date;
-}
+// export interface Product {
+//   _id: number;
+//   title: string;
+//   brand: string;
+//   category: string;
+//   color: string;
+//   price: string;
+//   createdAt?: Date;
+//   updatedAt?: Date;
+// }
 
 @Component({
   selector: 'app-product-list',
@@ -26,10 +27,10 @@ export class ProductListComponent implements OnInit {
     this.productSer.getAllProduct()
       .subscribe(
         (result)=>{
-          console.log(result);
+          // console.log(result);
           this.products = result.product;
           this.count = result.count;
-         console.log(this.products);
+        //  console.log(this.products);
         }
       )
   }

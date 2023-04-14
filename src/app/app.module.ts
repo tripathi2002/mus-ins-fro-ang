@@ -25,7 +25,7 @@ import { CategoryListComponent } from './catalog/category-list/category-list.com
 import { BrandListComponent } from './catalog/brand-list/brand-list.component';
 import { AddBrandComponent } from './catalog/add-brand/add-brand.component';
 import { OrdersComponent } from './catalog/orders/orders.component';
-import { CustommerListComponent } from './catalog/custommer-list/custommer-list.component';
+import { CustomerListComponent } from './catalog/customer-list/customer-list.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +43,7 @@ import { CustommerListComponent } from './catalog/custommer-list/custommer-list.
     BrandListComponent,
     AddBrandComponent,
     OrdersComponent,
-    CustommerListComponent,
+    CustomerListComponent,
   ],
   imports: [
     BrowserModule,

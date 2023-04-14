@@ -3,6 +3,8 @@ import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
 import { debounceTime, filter, map, pipe, switchAll, tap } from 'rxjs';
 
+import { Auth } from '../models/auth';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -17,12 +19,20 @@ export class LoginComponent {
 
   login(username: string, password: string){
     this.auth.login(username, password)
-      .subscribe((result)=>{
-          if(result['token']){
+      .subscribe((result: Auth)=>{
+          /* if(result['token']){
             // console.log(result);
             localStorage.setItem('username', result['firstName']);
             localStorage.setItem('email', result['email']);
             localStorage.setItem('token', result['token']);
+
+            this.router.navigateByUrl('dashboard');
+          } */
+          if(result.token){
+            // console.log(result);
+            localStorage.setItem('username', result.firstName);
+            localStorage.setItem('email', result.email);
+            localStorage.setItem('token', result.token);
 
             this.router.navigateByUrl('dashboard');
           }
@@ -36,10 +46,8 @@ export class LoginComponent {
       });
   }
 
-
   logout(): boolean {
     this.auth.logout();
     return false;
   }
-
 }

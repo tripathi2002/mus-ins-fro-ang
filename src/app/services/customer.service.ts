@@ -1,32 +1,30 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
 import { BASE_URL } from '../api';
-import { map, Observable } from 'rxjs';
+import { map } from 'rxjs';
 
 @Injectable()
-export class CategoryService {
+export class CustomerService {
 
-  path: string = '/category/product';
+  path: string = '/user/allUser';
 
   constructor(
     private http: HttpClient,
     @Inject(BASE_URL) private url: string,
   ) { }
 
-  // /api/category/product
-
-  getAllCateory(): any {
+  getAllCustomer(): any {
     // let headers: HttpHeaders = new HttpHeaders({
     //   'Authorization': `Bearer ${localStorage.getItem('token')}`
     // });
 
-    return this.http.get(`${BASE_URL}${this.path}`)
+    return this.http.get(`${this.url}${this.path}`)
       .pipe(
         map(res => {
           // console.log(res);
           return res; 
         })
-      )
+      );
   }
 
 }

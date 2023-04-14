@@ -1,0 +1,29 @@
+<div class="recent-orders">
+    <h2>{{title}}</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Mobile No.</th>
+                <th>IsBlocked</th>
+                <th>Join Date</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let customer of customers" >
+                <td>__</td>
+                <td>{{ customer.firstName }}</td>
+                <td>{{ customer.email }}</td>
+                <td>{{ customer.mobile }}</td>
+                <td>{{ customer.isBlocked }}</td>
+                <td>{{ customer.createdAt | date: 'shortDate' }}</td>
+                <!-- <td>{{ customer.updatedAt | date: 'shortDate' }}</td> -->
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <a >Show All</a>
+</div>
