@@ -1,33 +1,28 @@
 <div class="recent-orders">
+    {{ products }}
+    {{ count }}
     <h2>Recent Orders</h2>
     <table>
         <thead>
             <tr>
                 <th>S.No</th>
-                <th>Product Name</th>
-                <th>Product Number</th>
-                <th>Payment</th>
-                <th>Status</th>
-                <th></th>
+                <th>Name</th>
+                <th>Brand</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Color</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-            <td>Foldable Mini Dron</td>
-                <td>85631</td>
-                <td>Due</td>
-                <td class="warning">Pending</td>
-                <td class="primary">Details</td>
+            <tr *ngFor="let product of products" >
+                <td>__</td>
+                <td>{{product.title}}</td>
+                <td>{{product.brand}}</td>
+                <td>{{product.category}}</td>
+                <td>{{product.price}}</td>
+                <td>{{product.color}}</td>
             </tr>
-            <tr>
-                <td>1</td>
-            <td>Foldable Mini Dron</td>
-                <td>85631</td>
-                <td>Due</td>
-                <td class="warning">Pending</td>
-                <td class="primary">Details</td>
-            </tr>
+            <!-- 
             <tr>
                 <td>1</td>
                 <td>Foldable Mini Dron</td>
@@ -35,17 +30,8 @@
                 <td>Due</td>
                 <td class="warning">Pending</td>
                 <td class="primary">Details</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Foldable Mini Dron</td>
-                <td>85631</td>
-                <td>Due</td>
-                <td class="warning">Pending</td>
-                <td class="primary">Details</td>
-            </tr>
+            </tr> -->
         </tbody>
     </table>
-    <a href="#">Show All</a>
+    <a >Show All</a>
 </div>
-    

@@ -14,7 +14,7 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   login(email: string, password: string): boolean {
-    this.http.post(`${API_KEY}/user/admin-login`, { email, password })
+    this.http.post(`${API_KEY}/user/login`, { email, password })
       .pipe(
         map(res => res)
       ).subscribe((data) => {
