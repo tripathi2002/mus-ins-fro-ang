@@ -4,20 +4,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { FooterComponent } from './footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { LoginComponent } from './login/login.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { LoggedInGuard } from './services/logged.guard';
-import { AUTH_PROVIDERS } from './services/auth.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { SidebarComponent } from './sidebar/sidebar.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
-// import {MatFormFieldModule} from '@angular/material/form-field';
-// import {MatInputModule} from '@angular/material/input';
+
+import { LoggedInGuard } from './services/logged.guard';
+import { Injector } from './services/injector.injectables';
+
+import { AppComponent } from './app.component';
+import { FooterComponent } from './footer/footer.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { LoginComponent } from './login/login.component';
 import { ForgotPasswpordComponent } from './forgot-passwpord/forgot-passwpord.component';
 import { AddProductComponent } from './catalog/add-product/add-product.component';
 import { AddCategoryComponent } from './catalog/add-category/add-category.component';
@@ -54,12 +53,11 @@ import { CustommerListComponent } from './catalog/custommer-list/custommer-list.
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatSidenavModule,
-    // MatFormFieldModule,
-    // MatInputModule,
+
   ],
   providers: [
-    AUTH_PROVIDERS,
     LoggedInGuard,
+    Injector
   ],
   bootstrap: [AppComponent]
 })

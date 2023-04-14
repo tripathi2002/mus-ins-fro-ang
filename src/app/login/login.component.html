@@ -1,12 +1,9 @@
 <div id="floating-message" role="alert" *ngIf="message">
     {{ message }}
 </div>
-
-
 <div class="container">
-    <div *ngIf="!authService.getUser()">
-
-        <form *ngIf="!authService.getUser()">
+    <div *ngIf="!auth.getUser()">
+        <form>
             <h1>Login</h1>
             <div class="form-group">
                 <label for="email">Email</label>
@@ -24,12 +21,10 @@
             </div>
         </form>
     </div>
-
-    <div *ngIf="authService.getUser()">
+    <div *ngIf="auth.getUser()">
         <h2>
-            Logged in as <b> {{ authService.getUser() }}</b>
+            Logged in as <b> {{ auth.getUser() }}</b>
         </h2>
         <a class="logout-link" (click)="logout()">Log out</a>
     </div>
-
 </div>

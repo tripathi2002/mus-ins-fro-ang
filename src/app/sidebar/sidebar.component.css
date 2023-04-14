@@ -11,8 +11,8 @@ aside .top {
     /* background: white; */
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-top: 1.4rem;
+    justify-content: center;
+    margin-top: 1rem;
 }
 
 aside .logo {
@@ -35,9 +35,10 @@ aside .sidebar {
     /* background: white; */
     display: flex;
     flex-direction: column;
-    height: 86vh;
+    height: 80vh;
     position: relative;
     top: 3rem;
+    overflow-y: auto;
 }
 
 aside h3 {
@@ -59,12 +60,12 @@ aside .sidebar a span {
     font-size: 1.6rem;
     transition: all 300ms ease;
 }
-
+/* 
 aside .sidebar a:last-child {
     position: absolute;
     bottom: 2rem;
     width: 100%;
-}
+} */
 
 aside .sidebar a.active{
     background: var(--color-light);

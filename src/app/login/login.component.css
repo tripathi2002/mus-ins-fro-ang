@@ -100,20 +100,17 @@ button[type="submit"]:hover {
   background-color: #bd2130;
 }
 
-
 #floating-message {
-  /* style the floating message container */
-  position: sticky;
-  top: 0;
-  background-color: #007bff;
+  position: absolute;
+  background: var(--color-warning);
   color: white;
   padding: 10px;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
   z-index: -10;
+  border-radius: 5rem;
 }
 
 .forget{
   float: right;
-
 }
