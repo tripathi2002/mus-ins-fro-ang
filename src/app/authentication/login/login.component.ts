@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { AuthService } from '../services/auth.service';
+import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 import { debounceTime, filter, map, pipe, switchAll, tap } from 'rxjs';
 
-import { Auth } from '../models/auth';
+import { Auth } from '../../models/auth.model';
 
 @Component({
   selector: 'app-login',

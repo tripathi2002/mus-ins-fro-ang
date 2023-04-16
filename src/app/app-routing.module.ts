@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './login/login.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { LoginComponent } from './authentication/login/login.component';
+import { DashboardComponent } from './main-layout/dashboard/dashboard.component';
 import { LoggedInGuard } from './services/logged.guard';
-import { NavbarComponent } from './navbar/navbar.component';
-import { ForgotPasswpordComponent } from './forgot-passwpord/forgot-passwpord.component';
+import { NavbarComponent } from './main-layout/navbar/navbar.component';
+import { ForgotPasswpordComponent } from './authentication/forgot-passwpord/forgot-passwpord.component';
 import { AddProductComponent } from './catalog/add-product/add-product.component';
 import { AddCategoryComponent } from './catalog/add-category/add-category.component';
 import { ProductListComponent } from './catalog/product-list/product-list.component';

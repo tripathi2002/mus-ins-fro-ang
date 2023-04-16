@@ -1,17 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AddProductService } from 'src/app/services/add-product.service';
-import { Product } from 'src/app/models/product';
-
-// export interface Product {
-//   _id: number;
-//   title: string;
-//   brand: string;
-//   category: string;
-//   color: string;
-//   price: string;
-//   createdAt?: Date;
-//   updatedAt?: Date;
-// }
+import { Product } from 'src/app/models/product.model';
 
 @Component({
   selector: 'app-product-list',

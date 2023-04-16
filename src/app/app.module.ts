@@ -6,18 +6,17 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SidebarComponent } from './sidebar/sidebar.component';
+import { SidebarComponent } from './main-layout/sidebar/sidebar.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 
 import { LoggedInGuard } from './services/logged.guard';
 import { Injector } from './services/injector.injectables';
 
 import { AppComponent } from './app.component';
-import { FooterComponent } from './footer/footer.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { LoginComponent } from './login/login.component';
-import { ForgotPasswpordComponent } from './forgot-passwpord/forgot-passwpord.component';
+import { NavbarComponent } from './main-layout/navbar/navbar.component';
+import { DashboardComponent } from './main-layout/dashboard/dashboard.component';
+import { LoginComponent } from './authentication/login/login.component';
+import { ForgotPasswpordComponent } from './authentication/forgot-passwpord/forgot-passwpord.component';
 import { AddProductComponent } from './catalog/add-product/add-product.component';
 import { AddCategoryComponent } from './catalog/add-category/add-category.component';
 import { ProductListComponent } from './catalog/product-list/product-list.component';
@@ -31,7 +30,7 @@ import { CustomerListComponent } from './catalog/customer-list/customer-list.com
   declarations: [
     AppComponent,
     NavbarComponent,
-    FooterComponent,
+    // FooterComponent,
     LoginComponent,
     DashboardComponent,
     SidebarComponent,

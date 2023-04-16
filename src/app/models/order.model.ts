@@ -1,4 +1,4 @@
-import { Product } from "./product";
+import { Product } from "./product.model";
 import { Customer } from "./customer.model";
  
 interface Products {

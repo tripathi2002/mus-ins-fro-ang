@@ -16,10 +16,6 @@ export class CategoryService {
   // /api/category/product
 
   getAllCateory(): any {
-    // let headers: HttpHeaders = new HttpHeaders({
-    //   'Authorization': `Bearer ${localStorage.getItem('token')}`
-    // });
-
     return this.http.get(`${BASE_URL}${this.path}`)
       .pipe(
         map(res => {
@@ -27,6 +23,16 @@ export class CategoryService {
           return res; 
         })
       )
+  }
+
+  addCategory(category: {}): any {
+    let headers: HttpHeaders = new HttpHeaders({
+      'Authorization': `Bearer ${localStorage.getItem('token')}`
+    });
+    
+    return this.http.post(
+      `${BASE_URL}${this.path}`, category, { headers }
+    ).pipe( map( res => res));
   }
 
 }
