@@ -1,22 +1,19 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
 import { BASE_URL } from '../api';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map } from 'rxjs';
 
 @Injectable()
-export class BrandService {
-  path: string = '/brand';
+export class ProductService {
+
+  path: string = '/product';
 
   constructor(
     private http: HttpClient,
     @Inject(BASE_URL) private url: string,
   ) { }
 
-  getAllBrand(): any {
-    // let headers: HttpHeaders = new HttpHeaders({
-    //   'Authorization': `Bearer ${localStorage.getItem('token')}`
-    // });
-
+  getAllProduct(): any {
     return this.http.get(`${BASE_URL}${this.path}`)
       .pipe(
         map(res => {
@@ -26,13 +23,13 @@ export class BrandService {
       )
   }
 
-  addBrand(brand: {}): any {
+  add(product: {}): any {
     let headers: HttpHeaders = new HttpHeaders({
       'Authorization': `Bearer ${localStorage.getItem('token')}`
     });
     
     return this.http.post(
-      `${BASE_URL}${this.path}`, brand, { headers }
+      `${BASE_URL}${this.path}`, product, { headers }
     ).pipe( map( res => res));
   }
 

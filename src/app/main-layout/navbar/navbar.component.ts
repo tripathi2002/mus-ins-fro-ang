@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: [
-    './../../../node_modules/bootstrap/dist/css/bootstrap.min.css',
+    // './../../../node_modules/bootstrap/dist/css/bootstrap.min.css',
     './navbar.component.css',
   ]
 })

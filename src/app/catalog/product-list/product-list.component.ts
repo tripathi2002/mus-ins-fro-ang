@@ -10,7 +10,10 @@ import { Product } from 'src/app/models/product.model';
 export class ProductListComponent implements OnInit {
   products: Product[];
   count: number = 0;
-  constructor(private productSer: AddProductService){}
+  title: string;
+  constructor(private productSer: AddProductService){
+    this.title = "Products";
+  }
 
   getAllProduct(): void {
     this.productSer.getAllProduct()

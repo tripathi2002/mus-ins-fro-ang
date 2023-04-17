@@ -1,5 +1,5 @@
 export interface Category {
-    _id: number,
+    _id: string,
     title: string,
     createdAt: Date,  
     updatedAt?: Date, 

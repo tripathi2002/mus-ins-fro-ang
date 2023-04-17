@@ -1,4 +1,62 @@
+<div class="category">
+    <div id="err" class="err-massage">
+       {{ error }}
+    </div>
+    <div class="form">
+        <form (ngSubmit)="add()" [formGroup]="product">
+            <div class="title">
+                <h2>{{ title }}</h2>
+            </div>
+            <div class="input-box">
+                <label for="title">Title: </label>
+                <input type="text" name="title" formControlName="title" id="title">
+            </div>
+            <div class="input-box">
+                <label for="price">Price: </label>
+                <input type="text" name="price" formControlName="price" id="price">
+            </div>
+            <div class="input-box">
+                <label for="description">Description: </label>
+                <input type="text" name="description" formControlName="description" id="description">
+            </div>
+            <div class="input-box">
+                <label for="color">Color: </label>
+                <input type="text" name="color" formControlName="color" id="color">
+            </div>
+            <div class="input-box">
+                <label for="quantity">Quantity: </label>
+                <input type="text" name="quantity" formControlName="quantity" id="quantity">
+            </div>
+            <!-- <div class="input-box">
+                <label for="category">Category: </label>
+                <select name="category" formControlName="category" id="category">
+                    <option value="{{catid}}">Laptop</option>
+                    <option value="{{catid}}">TV</option>
+                </select>
+            </div> -->
+            <div class="input-box" >
+                <label for="category">Category: </label>
+                <select name="category" formControlName="category" id="category">
+                    <option *ngFor="let category of categories" value="{{category._id}}">{{category.title}}</option>
+                    <!-- <option value="{{catid}}">TV</option> -->
+                </select>
+            </div>
+            <div class="input-box">
+                <label for="brand">Brand: </label>
+                <select name="brand" formControlName="brand" id="brand">
+                    <option *ngFor="let brand of brands" value="{{brand._id}}">{{brand.title}}</option>
+                <!-- <option value="{{braid}}">Samsung</option>
+                    <option value="{{braid}}">Apple</option> -->
+                </select>
+            </div>
+            <br>
+            <button type="submit">Add</button>
+        </form>
+    </div>
 
+</div>
+
+<!-- 
 <form [formGroup]="product" (ngSubmit)="addProduct()">
     <div class="form">
             {{ title}}
@@ -40,4 +98,4 @@
         </div>
     </div>
 
-    </form>
+    </form> -->

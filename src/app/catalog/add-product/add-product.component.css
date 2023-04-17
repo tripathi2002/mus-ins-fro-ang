@@ -1,4 +1,72 @@
-.form {
+
+.category {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: var(--color-info-light);
+}
+
+.category h2 {
+  text-align: center;
+}
+
+
+.category .form {
+  border: 0.4rem solid var(--color-light);
+  border-radius: var(--border-radius-2);
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+}
+.category form {
+  text-align: center;
+}
+
+.category .input-box {
+  font-size: 1.2rem;
+  margin: 0 5px;
+  padding: 0.5rem;
+  border-radius: var(--border-radius-1);
+
+}
+
+.category label, input, button {
+  /* text-align: center; */
+  margin: 0 5px;
+  padding: 0.5rem;
+  border-radius: var(--border-radius-1);
+
+}
+
+.category button {
+  width: 4rem;
+}
+
+.category .err-massage {
+  width: 50vw;
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.4rem;
+  margin: 0.4rem 0rem;
+  position: relative;
+  color: var(--color-warning);
+  background: var(--color-dark);
+  border-radius: var(--border-radius-1);
+  /* transition: all 3000ms ease; */
+  display: none;
+}
+
+
+
+
+
+/* .form {
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -13,4 +81,4 @@
   margin: 0.5rem 0.2rem;
   border-radius: var(--border-radius-1);
   font-size: 2rem;
-}
+} */

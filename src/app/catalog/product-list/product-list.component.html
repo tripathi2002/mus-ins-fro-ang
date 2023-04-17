@@ -1,7 +1,5 @@
 <div class="recent-orders">
-    {{ products }}
-    {{ count }}
-    <h2>Recent Orders</h2>
+    <h2>{{title}}</h2>
     <table>
         <thead>
             <tr>
@@ -17,8 +15,8 @@
             <tr *ngFor="let product of products" >
                 <td>__</td>
                 <td>{{product.title}}</td>
-                <td>{{product.brand}}</td>
-                <td>{{product.category}}</td>
+                <td>{{product.brand.title}}</td>
+                <td>{{product.category.title}}</td>
                 <td>{{product.price}}</td>
                 <td>{{product.color}}</td>
             </tr>

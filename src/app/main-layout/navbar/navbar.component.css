@@ -1,0 +1,28 @@
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background: var(--color-light); */
+    background: var(--color-primary);
+}
+
+.main .left {
+    margin: 0 1rem;
+    /* padding: 0.1rem; */
+}
+
+.main .right {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* margin: 0px 2rem; */
+    margin: 0 1rem;
+    /* padding: 0.1rem; */
+}
+
+.main .logo {
+        height: 2rem;
+        width: 2rem;
+        margin: 0 1rem;
+}
