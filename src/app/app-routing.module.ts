@@ -13,28 +13,30 @@ import { BrandListComponent } from './catalog/brand-list/brand-list.component';
 import { AddBrandComponent } from './catalog/add-brand/add-brand.component';
 import { OrdersComponent } from './catalog/orders/orders.component';
 import { CustomerListComponent } from './catalog/customer-list/customer-list.component';
+import { ProductImagesComponent } from './product/product-images/product-images.component';
 
 const routes: Routes = [
 
   // { path:'navbar', component: NavbarComponent },
   { path:'forgot-password', component: ForgotPasswpordComponent },
-  { path:'', redirectTo: 'login', pathMatch: 'full'},
+  // { path:'', redirectTo: 'login', pathMatch: 'full'},
   { path: 'login', component: LoginComponent },
-  { path: 'product', component: AddProductComponent },
-  { path: 'product-list', component: ProductListComponent },
   { path: 'category', component: AddCategoryComponent },
   { path: 'category-list', component: CategoryListComponent },
   { path: 'brand', component: AddBrandComponent },
   { path: 'brand-list', component: BrandListComponent },
   { path: 'orders', component: OrdersComponent },
   { path: 'customer', component: CustomerListComponent },
+  { path: 'product', component: ProductListComponent },
+  { path: 'product/add', component: AddProductComponent },
+  { path: 'product/upload/:id', component: ProductImagesComponent},
   
   { 
     path: 'dashboard', 
     component: DashboardComponent, 
     // canActivate: [LoggedInGuard],
   },
-  { path: '**', redirectTo: 'login'},
+  // { path: '**', redirectTo: 'login'},
   
 
 ];

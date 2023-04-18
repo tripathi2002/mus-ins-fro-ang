@@ -25,6 +25,7 @@ import { BrandListComponent } from './catalog/brand-list/brand-list.component';
 import { AddBrandComponent } from './catalog/add-brand/add-brand.component';
 import { OrdersComponent } from './catalog/orders/orders.component';
 import { CustomerListComponent } from './catalog/customer-list/customer-list.component';
+import { ProductImagesComponent } from './catalog/upload/product-images/product-images.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { CustomerListComponent } from './catalog/customer-list/customer-list.com
     AddBrandComponent,
     OrdersComponent,
     CustomerListComponent,
+    ProductImagesComponent,
   ],
   imports: [
     BrowserModule,

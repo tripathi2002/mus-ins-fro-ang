@@ -8,24 +8,24 @@
                 <h2>{{ title }}</h2>
             </div>
             <div class="input-box">
-                <label for="title">Title: </label>
-                <input type="text" name="title" formControlName="title" id="title">
+                <!-- <label for="title">Title: </label> -->
+                <input type="text" name="title" placeholder="Enter Title" formControlName="title" id="title">
             </div>
             <div class="input-box">
-                <label for="price">Price: </label>
-                <input type="text" name="price" formControlName="price" id="price">
+                <!-- <label for="price">Price: </label> -->
+                <input type="text" name="price" placeholder="Enter Price" formControlName="price" id="price">
             </div>
             <div class="input-box">
-                <label for="description">Description: </label>
-                <input type="text" name="description" formControlName="description" id="description">
+                <!-- <label for="description">Description: </label> -->
+                <input type="text" name="description" placeholder="Enter Description" formControlName="description" id="description">
             </div>
             <div class="input-box">
-                <label for="color">Color: </label>
-                <input type="text" name="color" formControlName="color" id="color">
+                <!-- <label for="color">Color: </label> -->
+                <input type="text" name="color" placeholder="Enter Color" formControlName="color" id="color">
             </div>
             <div class="input-box">
-                <label for="quantity">Quantity: </label>
-                <input type="text" name="quantity" formControlName="quantity" id="quantity">
+                <!-- <label for="quantity">Quantity: </label> -->
+                <input type="number" name="quantity" placeholder="Enter Quantity" formControlName="quantity" id="quantity">
             </div>
             <!-- <div class="input-box">
                 <label for="category">Category: </label>
@@ -36,18 +36,26 @@
             </div> -->
             <div class="input-box" >
                 <label for="category">Category: </label>
-                <select name="category" formControlName="category" id="category">
+                <select title="Select Category" name="category" formControlName="category" id="category">
+                    <option selected>Select Category</option>
                     <option *ngFor="let category of categories" value="{{category._id}}">{{category.title}}</option>
+                    <!-- <option value=""  selected placeholder="Select Category"></option> -->
+
                     <!-- <option value="{{catid}}">TV</option> -->
                 </select>
             </div>
             <div class="input-box">
                 <label for="brand">Brand: </label>
-                <select name="brand" formControlName="brand" id="brand">
+                <select name="brand" title="Select Brand" formControlName="brand">
+                    <option selected>Select Brand</option>
                     <option *ngFor="let brand of brands" value="{{brand._id}}">{{brand.title}}</option>
-                <!-- <option value="{{braid}}">Samsung</option>
-                    <option value="{{braid}}">Apple</option> -->
+                    <!-- <option value="{{braid}}">Samsung</option>
+                 -->
                 </select>
+            </div>
+            <div class="image-box">
+                <label for="file"><img src="./images/profile.png"  alt="select image"></label>
+                <input type="file" name="image" id="file">
             </div>
             <br>
             <button type="submit">Add</button>

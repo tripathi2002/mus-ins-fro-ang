@@ -9,16 +9,18 @@
                 <th>Category</th>
                 <th>Price</th>
                 <th>Color</th>
+                <th>upload/view</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let product of products" >
-                <td>__</td>
+                <td>{{product._id}}</td>
                 <td>{{product.title}}</td>
                 <td>{{product.brand.title}}</td>
                 <td>{{product.category.title}}</td>
                 <td>{{product.price}}</td>
                 <td>{{product.color}}</td>
+                <td><a [routerLink]="['./upload/{{product._id}}']"><span class="material-icons-sharp">upload</span></a></td>
             </tr>
             <!-- 
             <tr>
