@@ -44,6 +44,7 @@ export class AddProductComponent implements OnInit {
     color: new FormControl(''),
     category: new FormControl(),
     brand: new FormControl(),
+    file: new FormControl()
   });
 
 
@@ -54,7 +55,7 @@ export class AddProductComponent implements OnInit {
         alert("Product Added Successfully!");
       }, (err) => {
         document.getElementById('err').style.display = 'block';
-        this.error = err.message;
+        this.error = err.error.message;
         setTimeout(function () {
           document.getElementById('err').style.display = 'none';
           this.error = "";

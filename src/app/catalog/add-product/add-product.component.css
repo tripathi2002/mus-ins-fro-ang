@@ -68,27 +68,6 @@ select {
   display: none;
 }
 
-
-
-
-
-/* .form {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;    
-  background: var(--color-dark-variant);
-}
-
-.form input {
-  padding: 0.3em;
-  margin: 0.5rem 0.2rem;
-  border-radius: var(--border-radius-1);
-  font-size: 2rem;
-} */
-
 .category .image-box{
   /* background-color: blue; */
   border: 0.2rem solid var(--color-info-dark);

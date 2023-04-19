@@ -33,4 +33,21 @@ export class ProductService {
     ).pipe( map( res => res));
   }
 
+
+  // upload(id:string ,images: File){
+  upload(id:string , file: File[]){
+    let headers: HttpHeaders = new HttpHeaders({
+      'Authorization': `Bearer ${localStorage.getItem('token')}`
+    });
+   
+    // return this.http.put(`${this.url + this.path}/upload/${id}`, {images: file}, { headers }).pipe(map(res=> res));
+
+    const formData = new FormData();
+    formData.append("images", file[0]);
+    // formData.append("images", file[0]);
+    // formData.append("images", file);
+    return this.http.put(`${this.url + this.path}/upload/${id}`, formData, { headers }).pipe(map(res=> res));
+
+  }
+
 }

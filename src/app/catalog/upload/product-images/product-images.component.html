@@ -1,1 +1,22 @@
-<p>product-images works!</p>
+<div class="category">
+    <div id="err" class="err-massage">
+       {{ error }}
+    </div>
+    <div class="form">
+        <!-- <form (ngSubmit)="upload()"> -->
+        <form (ngSubmit)="upload()" [formGroup]="productUpload">
+            <div class="title">
+                <h2>{{ title }}</h2>
+            </div>
+
+            <div class="image-box">
+                <label for="file"><img src="../../../../assets/images/profile.png"  alt="select image"></label>
+                <input type="file" (change)="ImageUpload($event)" multiple id="file">
+                <!-- <input type="file"  formControlName="images" multiple id="file"> -->
+            </div>
+            <br>
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+
+</div>

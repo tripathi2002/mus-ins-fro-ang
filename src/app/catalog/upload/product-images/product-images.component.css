@@ -1,0 +1,88 @@
+.category {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--color-info-light);
+}
+
+.category h2 {
+    text-align: center;
+}
+
+
+.category .form {
+    border: 0.4rem solid var(--color-light);
+    border-radius: var(--border-radius-2);
+    height: 90vh;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.category form {
+    text-align: center;
+}
+
+
+
+label,
+input,
+button,
+select {
+    /* text-align: center; */
+    margin: 0 5px;
+    padding: 0.5rem;
+    border-radius: var(--border-radius-1);
+    width: 50vw;
+}
+
+.category .input-box {
+    font-size: 1.2rem;
+    margin: 0 5px;
+    padding: 0.5rem;
+    border-radius: var(--border-radius-1);
+    width: 50vw;
+    text-align: center;
+}
+
+select {
+    width: 35vw;
+}
+
+.category button {
+    width: 4rem;
+}
+
+.category .err-massage {
+    width: 50vw;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.4rem;
+    margin: 0.4rem 0rem;
+    position: relative;
+    color: var(--color-warning);
+    background: var(--color-dark);
+    border-radius: var(--border-radius-1);
+    /* transition: all 3000ms ease; */
+    display: none;
+}
+
+.category .image-box {
+    /* background-color: blue; */
+    border: 0.2rem solid var(--color-info-dark);
+    border-radius: var(--border-radius-3);
+}
+
+.category .image-box img {
+    width: 5rem;
+    /* display: none; */
+}
+/* 
+.category .image-box #file {
+    display: none;
+} */
