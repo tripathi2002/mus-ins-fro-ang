@@ -24,7 +24,7 @@
                 <input type="text" name="color" placeholder="Enter Color" formControlName="color" id="color">
             </div>
             <div class="input-box">
-                <!-- <label for="quantity">Quantity: </label> -->
+                <label for="quantity">Quantity: </label><br>
                 <input type="number" name="quantity" placeholder="Enter Quantity" formControlName="quantity" id="quantity">
             </div>
             <!-- <div class="input-box">
@@ -35,7 +35,7 @@
                 </select>
             </div> -->
             <div class="input-box" >
-                <label for="category">Category: </label>
+                <label for="category">Category: </label><br>
                 <select title="Select Category" name="category" formControlName="category" id="category">
                     <option selected>Select Category</option>
                     <option *ngFor="let category of categories" value="{{category._id}}">{{category.title}}</option>
@@ -45,7 +45,7 @@
                 </select>
             </div>
             <div class="input-box">
-                <label for="brand">Brand: </label>
+                <label for="brand">Brand: </label><br>
                 <select name="brand" title="Select Brand" formControlName="brand">
                     <option selected>Select Brand</option>
                     <option *ngFor="let brand of brands" value="{{brand._id}}">{{brand.title}}</option>

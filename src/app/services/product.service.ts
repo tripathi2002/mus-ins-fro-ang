@@ -50,4 +50,14 @@ export class ProductService {
 
   }
 
+  uploads(id: string, formData: FormData){
+    let headers: HttpHeaders = new HttpHeaders({
+      'Authorization': `Bearer ${localStorage.getItem('token')}`
+    });
+
+    console.log(formData)
+
+    return this.http.put(`${this.url + this.path}/upload/${id}`, formData, { headers }).pipe(map(res => res));
+  }
+
 }

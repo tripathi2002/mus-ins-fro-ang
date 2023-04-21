@@ -4,14 +4,16 @@
     </div>
     <div class="form">
         <!-- <form (ngSubmit)="upload()"> -->
-        <form (ngSubmit)="upload()" [formGroup]="productUpload">
+        <!-- <form (ngSubmit)="upload()" [formGroup]="productUpload"> -->
+        <!-- <form (ngSubmit)="uploads()" [formGroup]="productUpload"> -->
+        <form (ngSubmit)="uploads()">
             <div class="title">
                 <h2>{{ title }}</h2>
             </div>
 
             <div class="image-box">
                 <label for="file"><img src="../../../../assets/images/profile.png"  alt="select image"></label>
-                <input type="file" (change)="ImageUpload($event)" multiple id="file">
+                <input hidden type="file" (change)="ImageUpload($event)" multiple id="file">
                 <!-- <input type="file"  formControlName="images" multiple id="file"> -->
             </div>
             <br>
