@@ -112,3 +112,7 @@ b {
 .warning{
     color: var(--color-warning);
 }
+
+::-webkit-scrollbar{
+    display: none;
+}
