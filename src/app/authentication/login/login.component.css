@@ -101,7 +101,7 @@ button[type="submit"]:hover {
 }
 
 #floating-message {
-  position: absolute;
+  /* position: absolute; */
   background: var(--color-warning);
   color: white;
   padding: 10px;
@@ -109,8 +109,26 @@ button[type="submit"]:hover {
   box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
   z-index: -10;
   border-radius: 5rem;
+  margin-top: 0.51rem;
 }
 
 .forget{
   float: right;
+}
+
+.forget a{
+  text-decoration-line: underline;
+}
+
+.navigater{
+  margin: 1rem auto;
+  text-align: center;
+  text-decoration-line: underline;
+  /* align-items: center; */
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  color: blue;
+  background: var(--color-light);
+  width: 20rem;
+  border-radius: var(--border-radius-2);
 }

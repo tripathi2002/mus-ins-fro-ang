@@ -16,7 +16,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './main-layout/navbar/navbar.component';
 import { DashboardComponent } from './main-layout/dashboard/dashboard.component';
 import { LoginComponent } from './authentication/login/login.component';
-import { ForgotPasswpordComponent } from './authentication/forgot-passwpord/forgot-passwpord.component';
+import { ForgotPasswordComponent } from './authentication/forgot-password/forgot-password.component';
 import { AddProductComponent } from './catalog/add-product/add-product.component';
 import { AddCategoryComponent } from './catalog/add-category/add-category.component';
 import { ProductListComponent } from './catalog/product-list/product-list.component';
@@ -26,6 +26,7 @@ import { AddBrandComponent } from './catalog/add-brand/add-brand.component';
 import { OrdersComponent } from './catalog/orders/orders.component';
 import { CustomerListComponent } from './catalog/customer-list/customer-list.component';
 import { ProductImagesComponent } from './catalog/upload/product-images/product-images.component';
+import { SignupComponent } from './authentication/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { ProductImagesComponent } from './catalog/upload/product-images/product-
     LoginComponent,
     DashboardComponent,
     SidebarComponent,
-    ForgotPasswpordComponent,
+    ForgotPasswordComponent,
     AddProductComponent,
     AddCategoryComponent,
     ProductListComponent,
@@ -45,6 +46,7 @@ import { ProductImagesComponent } from './catalog/upload/product-images/product-
     OrdersComponent,
     CustomerListComponent,
     ProductImagesComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,

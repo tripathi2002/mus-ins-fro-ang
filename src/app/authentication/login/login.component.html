@@ -21,10 +21,15 @@
             </div>
         </form>
     </div>
+
     <div *ngIf="auth.getUser()">
         <h2>
             Logged in as <b> {{ auth.getUser() }}</b>
         </h2>
         <a class="logout-link" (click)="logout()">Log out</a>
     </div>
+</div>
+
+<div *ngIf="!auth.getUser()" class="navigater ">
+    <a  [routerLink]="['/signup']">Go to the Sign Up page</a>
 </div>
