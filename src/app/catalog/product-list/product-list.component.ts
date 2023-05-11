@@ -22,7 +22,7 @@ export class ProductListComponent implements OnInit {
           // console.log(result);
           this.products = result.product;
           this.count = result.count;
-        //  console.log(this.products);
+         console.log(this.products);
         }
       )
   }

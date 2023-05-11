@@ -14,7 +14,7 @@ export class LoginComponent {
   message: string;
 
   constructor(public auth: AuthService, private router: Router) {
-    this.message = "Invalid Credentials";
+    this.message = "";
   }
 
   login(username: string, password: string){

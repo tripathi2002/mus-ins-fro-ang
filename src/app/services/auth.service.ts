@@ -34,4 +34,8 @@ export class AuthService {
     return this.getUser() !== null;
   }
 
+  register(customer: {}){
+    return this.http.post(`${this.URL}/user/register`, customer)
+      .pipe(map(res => res));
+  }
 }

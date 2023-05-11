@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { ProductService } from 'src/app/services/product.service';
   templateUrl: './product-images.component.html',
   styleUrls: ['./product-images.component.css']
 })
-export class ProductImagesComponent implements OnInit{
+export class ProductImagesComponent implements OnInit {
   title: string;
   error: string;
   id: string;
@@ -16,38 +16,53 @@ export class ProductImagesComponent implements OnInit{
   constructor(
     private router: Router,
     private Product: ProductService,
+    private route: ActivatedRoute
   ) {
     this.title = "Upload Product Images";
     this.error = "";
     // this.id = "6437ae8cfddd621ec20a5b84";
-    this.id = "643d8eb0213d7d659c896d82";
+    // this.id = "";
   }
 
   file: File[];
   imageUrls: string[] = [];
 
-  ImageUpload(event:any):void {
+  ImageUpload(event: any): void {
     this.file = event.target.files;
-    this.imageUrls = Array.from(this.file).map(file=> URL.createObjectURL(file));
-    console.log(this.imageUrls);
+    this.imageUrls = Array.from(this.file).map(file => URL.createObjectURL(file));
+    // console.log(this.imageUrls);
   }
-    
-  uploads(){
+
+  uploads() {
     const formData = new FormData();
-  
+    console.log("hii");
     for (let i = 0; i < this.file.length; i++) {
       formData.append('images', this.file[i]);
     }
 
     this.Product.uploads(this.id, formData)
       .subscribe(
-        (result)=>{
-            console.log(result);
+        (result) => {
+          alert("Product Image Added Successfully!");
+          this.router.navigateByUrl('/product');
+          // console.log(result);
+
         }, (err) => {
-          console.log(err);
+          document.getElementById('err').style.display = 'block';
+          // this.error = err.error.message;
+          this.error = err.message;
+          setTimeout(function () {
+            document.getElementById('err').style.display = 'none';
+            this.error = "";
+          }.bind(this), 4000);
+          console.log(err.message);
         }
       )
   }
 
-  ngOnInit(): void {  }
+  ngOnInit() {
+    this.id = this.route.snapshot.paramMap.get('id');
+    // console.log(this.route.snapshot.paramMap.get('id'));
+    // console.log(this.id);
+  }
 }

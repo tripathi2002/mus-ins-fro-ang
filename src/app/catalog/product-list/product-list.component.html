@@ -13,14 +13,14 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let product of products" >
-                <td>{{product._id}}</td>
+            <tr *ngFor="let product of products; let i = index" >
+                <td>{{ i+1 }}</td>
                 <td>{{product.title}}</td>
                 <td>{{product.brand.title}}</td>
                 <td>{{product.category.title}}</td>
                 <td>{{product.price}}</td>
                 <td>{{product.color}}</td>
-                <td><a [routerLink]="['upload/{{product._id}}']"><span class="material-icons-sharp">upload</span></a></td>
+                <td><a [routerLink]="['upload', product._id]"><span class="material-icons-sharp">upload</span></a></td>
             </tr>
             <!-- 
             <tr>
